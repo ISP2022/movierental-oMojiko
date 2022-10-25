@@ -32,6 +32,7 @@ class RegularPrice(PriceStrategy):
         return 1
     
     def get_price(self, days):
+        """Get the price of regular movies."""
         if days > 2:
             return 2 + (1.5*(days-2))
         return 2
@@ -44,6 +45,7 @@ class ChildrensPrice(PriceStrategy):
         return 1
     
     def get_price(self, days):
+        """Get the price of children movies."""
         if days > 3:
             return 1.5 + (1.5*(days-3))
         return 1.5
@@ -58,7 +60,7 @@ class Movie:
     CHILDRENS = ChildrensPrice()
 
     def __init__(self, title, price_code):
-           # Initialize a new movie.
+        # Initialize a new movie.
         self.title = title
         self.price_code = price_code
 

@@ -25,6 +25,7 @@ class CustomerTest(unittest.TestCase):
         pass
 
     def test_statement(self):
+        """Test to check the statement of customer."""
         stmt = self.c.statement()
         # get total charges from statement using a regex
         pattern = r".*Total [Cc]harges\s+(\d+\.\d\d).*"

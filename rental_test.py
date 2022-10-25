@@ -17,6 +17,7 @@ class RentalTest(unittest.TestCase):
         self.assertEqual(Movie.REGULAR, m.get_price_code())
 
     def test_rental_price(self):
+        """test to check the rental price that implement correctly."""
         rental = Rental(self.new_movie, 1)
         self.assertEqual(rental.get_price(), 3.0)
         rental = Rental(self.new_movie, 5)
@@ -31,7 +32,10 @@ class RentalTest(unittest.TestCase):
         
 
     def test_rental_points(self):
+        """test to check the rental points that implement correctly."""
         rental = Rental(self.new_movie, 5)
         self.assertEqual(rental.get_rental_points(), 5)
         rental = Rental(self.childrens_movie, 10)
+        self.assertEqual(rental.get_rental_points(), 1)
+        rental = Rental(self.regular_movie, 99)
         self.assertEqual(rental.get_rental_points(), 1)

@@ -1,6 +1,4 @@
-from movie import Movie
 import logging
-
 
 
 class Rental:
@@ -22,12 +20,15 @@ class Rental:
         self.days_rented = days_rented
 
     def get_movie(self):
+        """Get the movie name."""
         return self.movie
 
     def get_days_rented(self):
+        """Get the days that customer rent"""
         return self.days_rented
 
     def get_price(self):
+        """Get the total price of the movie."""
         try:
             amount = self.movie.get_price(days=self.days_rented)
         except:
@@ -37,9 +38,5 @@ class Rental:
         return amount
 
     def get_rental_points(self):
+        """Get the total rental points of the movie."""
         return self.movie.get_rental_points(days=self.days_rented)
-
-
-
-        
-    
