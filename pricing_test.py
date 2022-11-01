@@ -1,8 +1,6 @@
 import unittest
 from movie import MovieCatalog
 from rental import Rental
-import datetime
-from pricing import PriceStrategy
 
 
 class PricingTest(unittest.TestCase):
