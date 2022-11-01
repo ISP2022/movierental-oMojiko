@@ -56,7 +56,7 @@ class Customer:
 
         for rental in self.rentals:
             statement += rental_fmt.format(
-                rental.get_movie().get_title(),
+                rental.get_movie(),
                 rental.get_days_rented(),
                 rental.get_price())
 

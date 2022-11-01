@@ -7,6 +7,9 @@ This repository contains Python code translated from the original Java version.
 
 The runnable `main.py` creates a customer and prints a statement.
 
+## Price Code Design
+I choose to do the design in the rental class and module because it is the only class that use the pricecode for checking the type of the movie.
+
 
 ## Instructions
 
