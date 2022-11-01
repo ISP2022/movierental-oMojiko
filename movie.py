@@ -49,9 +49,6 @@ class MovieCatalog:
                 if title == movie.title and year == movie.year:
                     return movie
         
-if __name__ == "__main__":
-    catalog = MovieCatalog()
-    movie = catalog.get_movie("No time to die")
-    print(movie)
+
     
     
